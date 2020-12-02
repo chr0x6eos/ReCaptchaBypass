@@ -1,0 +1,5 @@
+# Ingore logfiles
+*.log
+
+# Ignore geckodriver
+geckodriver
