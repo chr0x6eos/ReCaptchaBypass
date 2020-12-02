@@ -1,5 +1,8 @@
-# Ingore logfiles
+# Byte-compiled
+__pycache__/
+
+# Logfiles
 *.log
 
-# Ignore geckodriver
+# Geckodriver binary
 geckodriver
