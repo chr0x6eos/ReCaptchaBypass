@@ -43,7 +43,7 @@ class ReCaptchaBypass:
     # Verbosity, (0:None, 1:Default, 2:Full)
     verbose = 1
     # Should tor be used?
-    tor = True
+    tor = False
     # Auto submit form afterwards
     auto_submit = True
     # Language to detect
@@ -51,7 +51,7 @@ class ReCaptchaBypass:
     # Browser settings profile
     profile = None
 
-    def __init__(self, host:Optional[str] = "", verbose:Optional[int] = 1, tor:Optional[bool] = True, auto_submit:Optional[bool] = True, language:Optional[str] = "en-EN", options = "") -> None:
+    def __init__(self, host:Optional[str] = "", verbose:Optional[int] = 1, tor:Optional[bool] = False, auto_submit:Optional[bool] = True, language:Optional[str] = "en-EN", options = "") -> None:
         """Initializes an instance of the RecaptchaBypasser class with the specified options"""
         self.set_host(host)
 
@@ -281,6 +281,7 @@ ________________________________________________________________________________
         # Get audio
         audio_file = speech_recognition.AudioFile("audio.wav")
         with audio_file as source:
+            # Get audio-data
             audio = recognizer.record(source)
 
         # Recognize text
