@@ -1,0 +1,4 @@
+pydub==0.24.1
+selenium==3.141.0
+SpeechRecognition==3.8.1
+urllib3==1.26.2
